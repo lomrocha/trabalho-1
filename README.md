@@ -2,9 +2,9 @@
 
 ## Seções
 
-- [Laboratório 1](#laboratório1)
-- [Laboratório 2](#laboratório2)
-- [Laboratório 4](#laboratório4)
+- [Laboratório 1](#laboratório-1)
+- [Laboratório 2](#laboratório-2)
+- [Laboratório 4](#laboratório-4)
 
 # Laboratório 1
 
