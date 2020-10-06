@@ -27,39 +27,39 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
 O pino digital de número 8 é o pino que está conectado ao Buzzer e, portanto, precisa ser setado como OUTPUT (Saída).
 Para a utilização do Monitor Serial, é preciso configurar uma taxa de transferência.
 
-```
+~~~c
 void setup()
 {
     pinMode(8, OUTPUT);
     Serial.begin(9600);
 }
-```
+~~~
 
 ## Loop
 
 A função analogRead() lê o valor do pino analógico de número 0 que está conectado ao sensor de luminosidade e guarda em uma variável.
 
-```
+~~~c
 int photoResistorValue = analogRead(0);
-```
+~~~
 
 Com o valor da luminosidade guardada, é checado se é maior ou não que um valor estipulado. Caso o valor da luminosidade seja maior que o valor estipulado, o Buzzer emitira um som até que o valor da luminosidade fique menor que o valor estipulado.
 
-```
+~~~c
 if (photoResistorValue > 900)
 {
-tone(8, 1000);
+    tone(8, 1000);
 }
 else
 {
-noTone(8);
+    noTone(8);
 }
-```
+~~~
 
 Ao final do loop, o valor da luminosidade é escrito no Monitor Serial.
 E um delay é chamado.
 
-```
+~~~c
 Serial.println(photoResistorValue);
 delay(1000);
-```
+~~~
