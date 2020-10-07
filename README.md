@@ -6,7 +6,7 @@
 - [Laboratório 1](#laboratório-1)
 - [Laboratório 2](#laboratório-2)
 - [Laboratório 4](#laboratório-4)
-- [Referências](#referências)
+- [Referências Bibliográficas](#referências-bibliográficas)
 
 ## Participação
 
@@ -32,17 +32,11 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
 
 ## Laboratório 4
 
-O objetivo deste laboratório é criar um circuito que, por meio de um sensor de luminosidade, vai detectar o valor de luminosidade sobre a placa ***Arduino*** e acionar um buzzer caso esse valor fique menor que um valor determinado.
+O objetivo deste laboratório é criar um circuito que, por meio de um sensor de luminosidade, detectará o valor da luminosidade sobre a placa ***Arduino*** e acionará um buzzer caso esse valor fique menor que um valor determinado.
 
 ![screenshot of arduino board](/laboratorio-4/exercicio-1.png)
 
 ### Setup
-
-Quando um programa é carregado e executado em um ***Arduino***, a função *setup()* é chamada para inicializar variáveis, configurar o modo dos pinos, inicializar bibliotecas, e etc. Além disso, a função *setup()* será executada apenas uma vez, no começo do programa.
-
-No caso do programa deste laboratório, a função *setup()* foi utulizada para definir o pino digital de número 8, que está conectado ao buzzer e, como OUTPUT (Saída). 
-
-A classe *Serial* é usada para comunicar o computador com o ***Arduino***. A função *Serial.begin()* é usada para que a placa possa se comunicar com o computador atráves do Monitor Serial, possibilitando impressão.
 
 ~~~c
 void setup()
@@ -52,7 +46,33 @@ void setup()
 }
 ~~~
 
+Quando um programa é carregado e executado em um ***Arduino***, a função *setup()* é chamada para inicializar variáveis, configurar o modo dos pinos, inicializar bibliotecas, e etc. Além disso, a função *setup()* será executada apenas uma vez, no começo do programa.
+
+No caso do programa deste laboratório, a função *setup()* foi utulizada para definir o pino digital de número 8, que está conectado ao buzzer e, como OUTPUT (Saída).
+
+~~~c
+pinMode(8, OUTPUT);
+~~~
+
+A classe *Serial* é usada para comunicar o computador com o ***Arduino***. A função *Serial.begin()* é usada para que a placa possa se comunicar com o computador atráves do Monitor Serial, possibilitando impressão.
+
+~~~c
+Serial.begin(9600);
+~~~
+
 ### Loop
+
+~~~c
+void loop()
+{
+  int photoResistorValue = analogRead(A0);
+  
+  (photoResistorValue < 900) ? tone(8, 1000) : noTone(8);
+  
+  Serial.println(photoResistorValue);
+  delay(2000);
+}
+~~~
 
 Depois da função *setup()* ter sido executada, a função *loop()* é chamada e é executada infinitamente enquanto o ***Arduino*** estiver ligado.
 
@@ -74,15 +94,17 @@ Caso o valor da luminosidade seja maior que o valor estipulado, a função *noTo
 
 A primeira parte do laboratório já foi concluída com sucesso e só resta a impressão do valor da luminosidade, que é feito usando a função *Serial.println()*.
 
+~~~c
+Serial.println(photoResistorValue);
+~~~
+
 Além disso, para que fique mais claro o som emitido pelo buzzer, um delay é chamado.
 
 ~~~c
-Serial.println(photoResistorValue);
 delay(2000);
 ~~~
 
-## Referências
+## Referências Bibliográficas
 
-- **ARDUINO REFERENCE**. Disponível em: https://www.arduino.cc/reference/en/. Acesso em: entre 03 out. 2020 e 07 out. 2020.
-- **TINKERCAD**. Disponível em: https://www.tinkercad.com. Acesso em: entre 03 out. 2020 e 07 out. 2020.
-
+- **ARDUINO REFERENCE**. Disponível em: https://www.arduino.cc/reference/en/. Acesso entre: 03 out. 2020 e 07 out. 2020.
+- **TINKERCAD**. Disponível em: https://www.tinkercad.com. Acesso entre: 03 out. 2020 e 07 out. 2020.
