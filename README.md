@@ -20,12 +20,17 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
 
 # Laboratório 4
 
+O objetivo deste laboratório é criar um circuito que, por meio de um sensor de luminosidade, vai detectar o valor de luminosidade sobre a placa ***Arduino*** e acionar um buzzer caso esse valor fique menor que um valor determinado.
+
 ![screenshot of arduino board](/laboratorio-4/exercicio-1.png)
 
 ## Setup
 
-O pino digital de número 8 é o pino que está conectado ao Buzzer e, portanto, precisa ser setado como OUTPUT (Saída).
-Para a utilização do Monitor Serial, é preciso configurar uma taxa de transferência.
+Quando um programa é carregado e executado em um ***Arduino***, a função *setup()* é chamada para inicializar variáveis, configurar o modo dos pinos, inicializar bibliotecas, e etc. Além disso, a função *setup()* será executada apenas uma vez, no começo do programa.
+
+No caso do programa deste laboratório, a função *setup()* foi utulizada para definir o pino digital de número 8, que está conectado ao buzzer e, como OUTPUT (Saída). 
+
+A classe *Serial* é usada para comunicar o computador com o ***Arduino***. A função *Serial.begin()* é usada para que a placa possa se comunicar com o computador atráves do Monitor Serial, possibilitando impressão.
 
 ~~~c
 void setup()
@@ -37,29 +42,29 @@ void setup()
 
 ## Loop
 
-A função analogRead() lê o valor do pino analógico de número 0 que está conectado ao sensor de luminosidade e guarda em uma variável.
+Depois da função *setup()* ter sido executada, a função *loop()* é chamada e é executada infinitamente enquanto o ***Arduino*** estiver ligado.
+
+A função *analogRead()* lê o valor de um pino analógico especificado, que no caso deste laboratório é o pino analógico A0. O valor desta leitura é, então, armanezado em uma variável.
 
 ~~~c
-int photoResistorValue = analogRead(0);
+int photoResistorValue = analogRead(A0);
 ~~~
 
-Com o valor da luminosidade guardada, é checado se é maior ou não que um valor estipulado. Caso o valor da luminosidade seja maior que o valor estipulado, o Buzzer emitira um som até que o valor da luminosidade fique menor que o valor estipulado.
+Com o valor da luminosidade armazenado na variável, é feito uma comparação para determinar se o valor é maior ou menor que um valor determinado. 
+
+Caso o valor da luminosidade seja menor que o valor estipulado, a função *tone()* é chamada e recebe dois valores: **8**, que é o pino conectado ao buzzer; e **1000** que é uma frequência escolhida para a realização do laboratório. 
+
+Caso o valor da luminosidade seja maior que o valor estipulado, a função *noTone()* é chamada para interromper o som emitido pelo buzzer.
 
 ~~~c
-if (photoResistorValue > 900)
-{
-    tone(8, 1000);
-}
-else
-{
-    noTone(8);
-}
+(photoResistorValue < 900) ? tone(8, 1000) : noTone(8);
 ~~~
 
-Ao final do loop, o valor da luminosidade é escrito no Monitor Serial.
-E um delay é chamado.
+A primeira parte do laboratório já foi concluída com sucesso e só resta a impressão do valor da luminosidade, que é feito usando a função *Serial.println()*.
+
+Além disso, para que fique mais claro o som emitido pelo buzzer, um delay é chamado.
 
 ~~~c
 Serial.println(photoResistorValue);
-delay(1000);
+delay(2000);
 ~~~

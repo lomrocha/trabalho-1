@@ -6,16 +6,10 @@ void setup()
 
 void loop()
 {
-  int photoResistorValue = analogRead(0);
-  if (photoResistorValue > 900)
-  {
-    tone(8, 1000);
-  }
-  else
-  {
-    noTone(8);
-  }
+  int photoResistorValue = analogRead(A0);
+  
+  (photoResistorValue < 900) ? tone(8, 1000) : noTone(8);
   
   Serial.println(photoResistorValue);
-  delay(1000);
+  delay(2000);
 }
