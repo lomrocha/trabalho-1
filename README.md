@@ -16,7 +16,7 @@ O trabalho foi dividido da seguinte forma:
 
 - **Laboratório 1**: Romário Santos.
 - **Laboratório 2**: Kayo Francisco.
-- **Laboratório 3**: Lucas Rocha.
+- **Laboratório 4**: Lucas Rocha.
 
 ## Laboratório 1
 
