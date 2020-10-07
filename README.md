@@ -26,9 +26,41 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
 
 ## Laboratório 2
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis quam nulla. Proin vulputate ornare massa a suscipit. Sed et lacus sit amet enim commodo consectetur eu lobortis est. Aliquam ullamcorper erat ut neque faucibus, in imperdiet mi eleifend. Donec dictum scelerisque tellus venenatis dignissim. Mauris turpis odio, rutrum at ipsum quis, convallis euismod sapien. Ut a gravida dolor, eget rutrum lorem. Fusce leo turpis, congue id nisl pellentesque, finibus finibus enim. Praesent at tristique nisi. Vestibulum eget viverra tortor. Suspendisse facilisis justo id porttitor fringilla. Sed nulla velit, aliquam convallis lobortis ac, molestie vitae quam. Curabitur elementum sem at pretium convallis. Nullam feugiat condimentum urna, nec ullamcorper diam volutpat vulputate.
+O objeto deste laboratório é entender o diagrama temporal de execução escolanado pelo algoritmo ***Taxa Monotônica***.
 
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam fringilla, quam sit amet eleifend lacinia, dui nulla aliquam metus, vitae scelerisque diam nibh euismod lacus. Cras ut neque at mauris pellentesque ornare a at orci. Cras aliquet a nisl ac placerat. Curabitur urna enim, imperdiet in orci quis, viverra pretium tellus. Quisque efficitur tellus hendrerit nisi condimentum, ut vulputate nulla dapibus. Nam at elit ut justo vulputate vestibulum ut in tellus. Donec fermentum massa et porta accumsan. Morbi nec faucibus nunc, in tristique leo. Donec sollicitudin lacinia euismod. Donec lacinia tempus metus, quis convallis massa. Nunc auctor eget augue a laoreet. Aliquam interdum ligula ac ex eleifend pellentesque. Mauris et orci sit amet ipsum laoreet gravida. Nunc tempor congue velit, a consequat enim placerat vitae. Etiam eu odio ipsum.
+### 01 - Considere o seguinte conjunto de tarefas periódicas e independentes e a correspondente caracterização temporal
+![screenshot of arduino board](/laboratorio-2/tabela1.png)
+
+#### Trace o respectivo diagrama temporal de execução
+![screenshot of arduino board](/laboratorio-2/diagrama1.png)
+
+
+#### Prove que o segundo algoritmo “Taxa Monotônica” é possível definir uma escala exequível para este conjunto de tarefas
+
+Para que o conjunto de tarefas sejam atendidas em suas restrições temporais pelo segundo algoritmo “Taxa Monotônica”, deve ser realizado o teste  U = Ci/Pi <= 1, Onde U é a utilização da memória.
+Para a tarefa A, temos U = 20/100 = 0,2.
+Para a tarefa B, temos U = 40/150 = 0,267.
+Para a tarefa C, temos U = 100/350 = 0,286.
+
+Somando U, temos 0,753 <= 1, que prova que o conjunto tem uma escala exequível, satisfazendo o algoritmo
+
+
+### 02 - Considere o seguinte conjunto de tarefas periódicas e independentes e a correspondente caracterização temporal
+
+![screenshot of arduino board](/laboratorio-2/tabela2.png)
+
+#### Identifique no respectivo diagrama temporal de execução a prova de não exequibilidade da escala
+
+![screenshot of arduino board](/laboratorio-2/diagrama2.png)
+
+
+#### Prove que o segundo algoritmo RM não é possível definir uma escala exequível para este conjunto de tarefas
+
+Para que o conjunto de tarefas sejam atendidas em suas restrições temporais pelo segundo algoritmo “Taxa Monotônica”, deve ser realizado o teste  U = Ci/Pi <= 1, Onde U é a utilização da memória.
+Para a tarefa A, temos U = 50/20 = 2,5.
+Para a tarefa B, temos U = 25/50 = 0,5.
+
+Somando U, temos 3 > 1, onde não há satisfação do algoritmo, o que prova que o conjunto de tarefas não tem uma escala exequível.
 
 ## Laboratório 4
 
