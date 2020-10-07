@@ -1,30 +1,42 @@
-# trabalho-1
+# Trabalho 1
 
 ## Seções
 
+- [Participação](#participação)
 - [Laboratório 1](#laboratório-1)
 - [Laboratório 2](#laboratório-2)
 - [Laboratório 4](#laboratório-4)
+- [Referências](#referências)
 
-# Laboratório 1
+## Participação
+
+O grupo é composto por três membros: **Kayo Francisco**, **Lucas Rocha** e **Romário Santos**.
+
+O trabalho foi dividido da seguinte forma:
+
+- **Laboratório 1**: Romário Santos.
+- **Laboratório 2**: Kayo Francisco.
+- **Laboratório 3**: Lucas Rocha.
+
+## Laboratório 1
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis quam nulla. Proin vulputate ornare massa a suscipit. Sed et lacus sit amet enim commodo consectetur eu lobortis est. Aliquam ullamcorper erat ut neque faucibus, in imperdiet mi eleifend. Donec dictum scelerisque tellus venenatis dignissim. Mauris turpis odio, rutrum at ipsum quis, convallis euismod sapien. Ut a gravida dolor, eget rutrum lorem. Fusce leo turpis, congue id nisl pellentesque, finibus finibus enim. Praesent at tristique nisi. Vestibulum eget viverra tortor. Suspendisse facilisis justo id porttitor fringilla. Sed nulla velit, aliquam convallis lobortis ac, molestie vitae quam. Curabitur elementum sem at pretium convallis. Nullam feugiat condimentum urna, nec ullamcorper diam volutpat vulputate.
 
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam fringilla, quam sit amet eleifend lacinia, dui nulla aliquam metus, vitae scelerisque diam nibh euismod lacus. Cras ut neque at mauris pellentesque ornare a at orci. Cras aliquet a nisl ac placerat. Curabitur urna enim, imperdiet in orci quis, viverra pretium tellus. Quisque efficitur tellus hendrerit nisi condimentum, ut vulputate nulla dapibus. Nam at elit ut justo vulputate vestibulum ut in tellus. Donec fermentum massa et porta accumsan. Morbi nec faucibus nunc, in tristique leo. Donec sollicitudin lacinia euismod. Donec lacinia tempus metus, quis convallis massa. Nunc auctor eget augue a laoreet. Aliquam interdum ligula ac ex eleifend pellentesque. Mauris et orci sit amet ipsum laoreet gravida. Nunc tempor congue velit, a consequat enim placerat vitae. Etiam eu odio ipsum.
 
-# Laboratório 2
+## Laboratório 2
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis quam nulla. Proin vulputate ornare massa a suscipit. Sed et lacus sit amet enim commodo consectetur eu lobortis est. Aliquam ullamcorper erat ut neque faucibus, in imperdiet mi eleifend. Donec dictum scelerisque tellus venenatis dignissim. Mauris turpis odio, rutrum at ipsum quis, convallis euismod sapien. Ut a gravida dolor, eget rutrum lorem. Fusce leo turpis, congue id nisl pellentesque, finibus finibus enim. Praesent at tristique nisi. Vestibulum eget viverra tortor. Suspendisse facilisis justo id porttitor fringilla. Sed nulla velit, aliquam convallis lobortis ac, molestie vitae quam. Curabitur elementum sem at pretium convallis. Nullam feugiat condimentum urna, nec ullamcorper diam volutpat vulputate.
 
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam fringilla, quam sit amet eleifend lacinia, dui nulla aliquam metus, vitae scelerisque diam nibh euismod lacus. Cras ut neque at mauris pellentesque ornare a at orci. Cras aliquet a nisl ac placerat. Curabitur urna enim, imperdiet in orci quis, viverra pretium tellus. Quisque efficitur tellus hendrerit nisi condimentum, ut vulputate nulla dapibus. Nam at elit ut justo vulputate vestibulum ut in tellus. Donec fermentum massa et porta accumsan. Morbi nec faucibus nunc, in tristique leo. Donec sollicitudin lacinia euismod. Donec lacinia tempus metus, quis convallis massa. Nunc auctor eget augue a laoreet. Aliquam interdum ligula ac ex eleifend pellentesque. Mauris et orci sit amet ipsum laoreet gravida. Nunc tempor congue velit, a consequat enim placerat vitae. Etiam eu odio ipsum.
 
-# Laboratório 4
+## Laboratório 4
 
 O objetivo deste laboratório é criar um circuito que, por meio de um sensor de luminosidade, vai detectar o valor de luminosidade sobre a placa ***Arduino*** e acionar um buzzer caso esse valor fique menor que um valor determinado.
 
 ![screenshot of arduino board](/laboratorio-4/exercicio-1.png)
 
-## Setup
+### Setup
 
 Quando um programa é carregado e executado em um ***Arduino***, a função *setup()* é chamada para inicializar variáveis, configurar o modo dos pinos, inicializar bibliotecas, e etc. Além disso, a função *setup()* será executada apenas uma vez, no começo do programa.
 
@@ -40,7 +52,7 @@ void setup()
 }
 ~~~
 
-## Loop
+### Loop
 
 Depois da função *setup()* ter sido executada, a função *loop()* é chamada e é executada infinitamente enquanto o ***Arduino*** estiver ligado.
 
@@ -68,3 +80,9 @@ Além disso, para que fique mais claro o som emitido pelo buzzer, um delay é ch
 Serial.println(photoResistorValue);
 delay(2000);
 ~~~
+
+## Referências
+
+- **ARDUINO REFERENCE**. Disponível em: https://www.arduino.cc/reference/en/. Acesso em: entre 03 out. 2020 e 07 out. 2020.
+- **TINKERCAD**. Disponível em: https://www.tinkercad.com. Acesso em: entre 03 out. 2020 e 07 out. 2020.
+
