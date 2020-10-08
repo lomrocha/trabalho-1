@@ -55,7 +55,7 @@ Para a tarefa B, temos U = 25/50 = 0,5.
 
 Somando U, temos 3 > 1, onde não há satisfação do algoritmo, o que prova que o conjunto de tarefas não tem uma escala exequível.
 
-## Laboratório 4
+## [Laboratório 4](https://www.tinkercad.com/embed/4EJqeeCCSDK?editbtn=1)
 
 O objetivo deste laboratório é criar um circuito que, por meio de um sensor de luminosidade, detectará o valor da luminosidade sobre a placa ***Arduino*** e acionará um buzzer caso esse valor fique menor que um valor determinado.
 
